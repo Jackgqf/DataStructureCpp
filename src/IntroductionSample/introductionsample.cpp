@@ -7,11 +7,12 @@ void swap(int *a, int *b){
     *b = tmp;
 }
 
-void bubblesort1A(int A[], int n){
+void bubblesort1A(int A[],int n)
+{
     bool sorted = false;
     while(!sorted){
         sorted = true;
-        for(int i=0;i<n;i++){
+        for(int i = 0;i < n; i++){
             if(A[i-1]>A[i]){
                 swap(&A[i-1],&A[i]);
                 sorted = false;
@@ -19,4 +20,14 @@ void bubblesort1A(int A[], int n){
         }
         n--;
     }
+}
+
+int countOnes(unsigned int n)
+{
+    int ones = 0;
+    while(n>0){
+        ones += (1&n);
+        n>>=1;
+    }
+    return ones;
 }
