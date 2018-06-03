@@ -6,7 +6,7 @@ void swap(int *a, int *b){
     *a = *b;
     *b = tmp;
 }
-
+//冒泡排序
 void bubblesort1A(int A[],int n)
 {
     bool sorted = false;
